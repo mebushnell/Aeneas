@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aeneas</title>
+  <link rel="stylesheet" href="site/style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="hero card">
+      <div class="eyebrow">Aeneas</div>
+      <h1 id="project-title">Parallel Reader</h1>
+      <p id="project-subtitle" class="subtitle">Loading corpus metadata…</p>
+
+      <div class="controls" aria-label="Corpus controls">
+        <label class="control">
+          <span>Book</span>
+          <select id="book-select" disabled>
+            <option>Loading…</option>
+          </select>
+        </label>
+
+        <div class="control inline">
+          <span>Unit</span>
+          <div class="nav-group">
+            <button id="prev-unit" type="button" disabled>◀ Previous</button>
+            <button id="next-unit" type="button" disabled>Next ▶</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="status" class="status">Starting…</div>
+    </header>
+
+    <section class="card reader-card" aria-live="polite">
+      <div class="reader-head">
+        <div>
+          <div id="book-label" class="reader-kicker">Book</div>
+          <h2 id="unit-title">Translation Unit</h2>
+        </div>
+        <div id="unit-counter" class="counter">0 / 0</div>
+      </div>
+
+      <div class="reader-grid">
+        <article class="side-panel">
+          <h3 id="source-title">Source</h3>
+          <div id="source-meta" class="side-meta"></div>
+          <div id="source-column" class="text-column"></div>
+        </article>
+
+        <article class="side-panel">
+          <h3 id="target-title">Target</h3>
+          <div id="target-meta" class="side-meta"></div>
+          <div id="target-column" class="text-column"></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script src="site/app.js"></script>
+</body>
+</html>
